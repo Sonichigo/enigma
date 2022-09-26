@@ -1,0 +1,94 @@
+*,
+*::after, 
+*::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: #4169E1;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+}
+.nav_brand{
+    width:110px;
+    height:45px;
+}
+.nav_menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+}
+.nav_item{
+    font-size: 1.6rem;
+    font-weight: 500;
+    size: 1;
+}
+.nav_item:hover{
+    color: navy;
+}
+.nav_toggler div{
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #F77924;
+    margin: 0.5rem;
+    border-radius: 10px;
+}
+.nav_toggler{
+    display: none;
+    cursor: pointer;
+}
+.nav_size{
+    width: 20px;
+    height: 20px;
+}
+@media screen and (max-width: 760px){
+    .nav_toggler{
+        display: block;
+    }
+    .nav_menu{
+        position: fixed;
+        top: 7vh;
+        right: 0;
+        width:30%;
+        height: 93vh;
+        background-color: #f8f9fa;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: 0.4s ease-in;
+    }
+}
+
+.nav_active{
+    transform: translateX(0);
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-4px, 5px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-4px, -5px);
+}
